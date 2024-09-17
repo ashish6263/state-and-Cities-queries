@@ -1,0 +1,104 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Sep 17, 2024 at 09:00 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.1.25
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `pianoman-live`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `states`
+--
+
+CREATE TABLE `states` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `state_name` varchar(255) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 1,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `states`
+--
+
+INSERT INTO `states` (`id`, `state_name`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'ANDAMAN AND NICOBAR ISLANDS', 1, NULL, '2024-04-30 07:43:13', NULL),
+(2, 'ANDHRA PRADESH', 1, NULL, '2024-04-30 07:43:13', NULL),
+(3, 'ARUNACHAL PRADESH', 1, NULL, '2024-04-30 07:43:13', NULL),
+(4, 'ASSAM', 1, NULL, '2024-04-30 07:43:13', NULL),
+(5, 'BIHAR', 1, NULL, '2024-04-30 07:43:13', NULL),
+(6, 'CHATTISGARH', 1, NULL, '2024-04-30 07:43:13', NULL),
+(7, 'CHANDIGARH', 1, NULL, '2024-04-30 07:43:13', NULL),
+(8, 'DAMAN AND DIU', 1, NULL, '2024-04-30 07:43:13', NULL),
+(9, 'DELHI', 1, NULL, '2024-04-30 07:43:13', NULL),
+(10, 'DADRA AND NAGAR HAVELI', 1, NULL, '2024-04-30 07:43:13', NULL),
+(11, 'GOA', 1, NULL, '2024-04-30 07:43:13', NULL),
+(12, 'GUJARAT', 1, NULL, '2024-04-30 07:43:13', NULL),
+(13, 'HIMACHAL PRADESH', 1, NULL, '2024-04-30 07:43:13', NULL),
+(14, 'HARYANA', 1, NULL, '2024-04-30 07:43:13', NULL),
+(15, 'JAMMU AND KASHMIR', 1, NULL, '2024-04-30 07:43:13', NULL),
+(16, 'JHARKHAND', 1, NULL, '2024-04-30 07:43:13', NULL),
+(17, 'KERALA', 1, NULL, '2024-04-30 07:43:13', NULL),
+(18, 'KARNATAKA', 1, NULL, '2024-04-30 07:43:13', NULL),
+(19, 'LAKSHADWEEP', 1, NULL, '2024-04-30 07:43:13', NULL),
+(20, 'MEGHALAYA', 1, NULL, '2024-04-30 07:43:13', NULL),
+(21, 'MAHARASHTRA', 1, NULL, '2024-04-30 07:43:13', NULL),
+(22, 'MANIPUR', 1, NULL, '2024-04-30 07:43:13', NULL),
+(23, 'MADHYA PRADESH', 1, NULL, '2024-04-30 07:43:13', NULL),
+(24, 'MIZORAM', 1, NULL, '2024-04-30 07:43:13', NULL),
+(25, 'NAGALAND', 1, NULL, '2024-04-30 07:43:13', NULL),
+(26, 'ORISSA', 1, NULL, '2024-04-30 07:43:13', NULL),
+(27, 'PUNJAB', 1, NULL, '2024-04-30 07:43:13', NULL),
+(28, 'PONDICHERRY', 1, NULL, '2024-04-30 07:43:13', NULL),
+(29, 'RAJASTHAN', 1, NULL, '2024-04-30 07:43:13', NULL),
+(30, 'SIKKIM', 1, NULL, '2024-04-30 07:43:13', NULL),
+(31, 'TELANGANA', 1, NULL, '2024-04-30 07:43:13', '2024-09-17 06:19:03'),
+(32, 'TAMIL NADU', 1, NULL, '2024-04-30 07:43:13', '2024-09-17 06:12:44'),
+(33, 'TRIPURA', 1, NULL, '2024-04-30 07:43:13', '2024-09-17 06:20:07'),
+(34, 'UTTAR PRADESH', 1, NULL, '2024-04-30 07:43:13', NULL),
+(35, 'UTTARAKHAND', 1, NULL, '2024-04-30 07:43:13', '2024-09-17 06:13:13'),
+(36, 'WEST BENGAL', 1, NULL, '2024-04-30 07:43:13', '2024-09-17 06:17:05');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `states`
+--
+ALTER TABLE `states`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `states`
+--
+ALTER TABLE `states`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
